@@ -1,18 +1,27 @@
 [
     {
+        "id": 1,
         "name": "San Pham1",
         "price": "1000"
     },
     {
+        "id": 2,
         "name": "San Pham2",
         "price": "2000"
     },
     {
+        "id": 3,
         "name": "San Pham3",
         "price": "3000"
     },
     {
+        "id": 4,
         "name": "bach",
         "price": "1"
+    },
+    {
+        "id": 5,
+        "name": "bach",
+        "price": "15"
     }
 ]

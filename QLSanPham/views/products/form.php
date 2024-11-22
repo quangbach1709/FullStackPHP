@@ -1,24 +1,13 @@
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form class="modal-content" method="post">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <p>Ten San Pham</p>
-                    <input class="w-75" id="f-name" type="text" name="name">
-                    <p>Gia Thanh</p>
-                    <input class="w-75" id="email" type="number" name="price">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Thêm</button>
-            </div>
-        </form>
+<!-- views/products/form.php -->
+<form method="post"  enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="hidden" name="id" value="<?php echo isset($sanPham['id']) ? $sanPham['id'] : ''; ?>"> <!-- them input hidden de truyen id -->
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="<?php echo isset($sanPham['name']) ? $sanPham['name'] : ''; ?>" required>
     </div>
-</div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price" value="<?php echo isset($sanPham['price']) ? $sanPham['price'] : ''; ?>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
