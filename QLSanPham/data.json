@@ -2,26 +2,37 @@
     {
         "id": 1,
         "name": "San Pham1",
-        "price": "1000"
+        "price": "1000",
+        "image": "..\/views\/img\/iphone.jpg"
     },
     {
         "id": 2,
         "name": "San Pham2",
-        "price": "2000"
+        "price": "2000",
+        "image": "..\/views\/img\/iphone.jpg"
     },
     {
         "id": 3,
         "name": "San Pham3",
-        "price": "3000"
+        "price": "3000",
+        "image": "..\/views\/img\/iphone.jpg"
     },
     {
         "id": 4,
         "name": "bach",
-        "price": "1"
+        "price": "1",
+        "image": "..\/views\/img\/iphone.jpg"
     },
     {
         "id": 5,
         "name": "bach",
-        "price": "15"
+        "price": "15",
+        "image": "..\/views\/img\/iphone.jpg"
+    },
+    {
+        "id": 6,
+        "name": "bach",
+        "price": "5",
+        "image": "OIP.jpg"
     }
 ]

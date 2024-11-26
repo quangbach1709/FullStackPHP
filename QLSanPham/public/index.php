@@ -5,11 +5,13 @@ $listSanPham = json_decode($jsonData, true);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $price = $_POST['price'];
+    $image = $_POST['image'];
 
     $newSanPham = [
         'id' => count($listSanPham) + 1,
         'name' => $name,
-        'price' => $price
+        'price' => $price,
+        'image' => $image
     ];
     $listSanPham[] = $newSanPham;
 
@@ -60,6 +62,10 @@ include_once "../views/partials/header.php";
 
         <div class="row">
             <div class="col">
+                Hinh anh
+<!--                <input type="image" src="../views/img/iphone.jpg">-->
+            </div>
+            <div class="col">
                 Sản phẩm
             </div>
             <div class="col">
@@ -77,6 +83,9 @@ include_once "../views/partials/header.php";
         foreach ($listSanPham as $key => $sanPham) {
             ?>
             <div class="row">
+                <div class="col">
+                    <img src="<?php echo $sanPham['image'] ?>" alt="image" width="100px">
+                </div>
                 <div class="col">
                     <?php echo $sanPham['name'] ?>
                 </div>
@@ -107,6 +116,8 @@ include_once "../views/partials/header.php";
             </div>
             <div class="modal-body">
                 <div>
+                    <p>Hinh anh san pham</p>
+                    <input class="w-75" id="image" type="file" name="image">
                     <p>Ten San Pham</p>
                     <input class="w-75" id="f-name" type="text" name="name">
                     <p>Gia Thanh</p>
